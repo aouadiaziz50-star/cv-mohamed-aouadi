@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>CV – Mohamed AOUADI | Développeur C++ / Qt / Python</title>
+<title>CV – Aziz AOUADI | Développeur C++ / Qt / Python</title>
 
 <!-- Social / Link Preview -->
-<meta property="og:title" content="CV – Mohamed AOUADI | Développeur C++ / Qt / Python" />
-<meta property="og:description" content="Étudiant à Polytech Tours (ISIE) – Recherche alternance. C++ · Qt · Python · Systèmes embarqués · HTML/CSS/JS" />
+<meta property="og:title" content="CV – Aziz AOUADI | Développeur C++ / Qt / Python" />
+<meta property="og:description" content="Étudiant ISIE à Polytech Tours – Recherche alternance 2025–2028. C++ · Qt · Python · Embarqué · HTML/CSS/JS" />
 <meta property="og:type" content="website" />
 <meta property="og:image" content="" />
 
@@ -26,9 +26,7 @@
   a:hover { text-decoration: underline; }
   .container { max-width: 960px; margin: 0 auto; padding: 24px; }
   header { display: grid; grid-template-columns: 1fr; gap: 16px; padding: 24px; background: linear-gradient(135deg, rgba(34,197,94,0.08), rgba(59,130,246,0.06)); border: 1px solid #243041; border-radius: 20px; }
-  @media (min-width: 720px) {
-    header { grid-template-columns: 1.8fr 1fr; align-items:center; }
-  }
+  @media (min-width: 720px) { header { grid-template-columns: 1.8fr 1fr; align-items:center; } }
   .name { font-size: clamp(28px, 4vw, 40px); font-weight: 800; letter-spacing: 0.2px; }
   .role { font-size: 16px; color: var(--muted); margin-top: 6px; }
   .contact { display:flex; flex-wrap: wrap; gap: 10px; }
@@ -47,6 +45,18 @@
   .chip { background: #0c1220; border:1px solid #223047; padding:6px 10px; border-radius: 999px; font-size: 13px; }
   ul.clean { margin: 8px 0 0 18px; }
   footer { text-align:center; color:var(--muted); font-size: 13px; margin: 26px 0; }
+
+  /* Modal fiche contact */
+  .overlay { position: fixed; inset: 0; background: rgba(2,6,23,0.6); display:none; }
+  .modal { position: fixed; inset: 0; display:none; place-items: center; padding: 20px; }
+  .card { width: 100%; max-width: 560px; background: #0f1623; border:1px solid #223047; border-radius: 20px; padding: 18px; }
+  .card h3 { margin: 0 0 6px; font-size: 20px; }
+  .row { display:flex; flex-wrap:wrap; gap: 10px; margin-top: 10px; }
+  .pill { background: #0c1220; border:1px solid #223047; padding: 8px 12px; border-radius: 999px; }
+  .modal-actions { display:flex; gap: 10px; margin-top: 14px; }
+  .close-x { position:absolute; top:16px; right:20px; font-size:22px; color:#94a3b8; cursor:pointer; }
+  .kbd { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+
   /* Print to PDF */
   @media print {
     .btn, .cta-row { display:none; }
@@ -60,44 +70,40 @@
 {
   "@context":"https://schema.org/",
   "@type":"Person",
-  "name":"Mohamed AOUADI",
+  "name":"Aziz AOUADI",
   "email":"mailto:aouadiaziz50@gmail.com",
   "telephone":"+33625403160",
   "url":"",
   "jobTitle":"Apprenti Développeur (C++ / Qt / Python)",
-  "alumniOf":{
-    "@type":"CollegeOrUniversity",
-    "name":"Polytech Tours – ISIE"
-  },
-  "knowsAbout":[
-    "C++", "Qt", "Python", "Systèmes embarqués", "Git", "Linux", "HTML", "CSS", "JavaScript"
-  ]}
+  "alumniOf": { "@type":"CollegeOrUniversity", "name":"Polytech Tours – ISIE" },
+  "knowsAbout":["C++","Qt","Python","Systèmes embarqués","Git","Linux","HTML","CSS","JavaScript"]
+}
 </script>
 </head>
 <body>
 <div class="container">
   <header>
     <div>
-      <div class="name">Mohamed AOUADI</div>
+      <div class="name">Aziz AOUADI</div>
       <div class="role">Développeur C++ · Qt · Python — Systèmes embarqués</div>
       <div style="height:12px"></div>
       <div class="contact">
         <a href="mailto:aouadiaziz50@gmail.com">aouadiaziz50@gmail.com</a>
         <a href="tel:+33625403160">+33 6 25 40 31 60</a>
-        <span>La Plaine Saint‑Denis / Tours (FR)</span>
-        <a href="#projets">Projets</a>
+        <span>Tours (FR)</span>
+        <a href="#experiences">Projets</a>
         <a href="#competences">Compétences</a>
       </div>
       <div style="height:14px"></div>
       <div class="cta-row">
         <button class="btn" onclick="window.print()">Télécharger en PDF</button>
-        <a class="btn secondary" href="#contact">Me contacter</a>
+        <button id="openContact" class="btn secondary" type="button">Me contacter</button>
       </div>
     </div>
     <div>
       <div class="item">
         <h3>Objectif</h3>
-        <p class="muted">Rechercher une alternance (immédiate) pour consolider mes compétences en C++/Qt/Python et contribuer à des projets concrets (embarqué, outillage, UI, data). Motivé, curieux, autonome et à l’aise en équipe.</p>
+        <p class="muted">Recherche d’alternance **2025–2028** (ISIE – Polytech Tours / ITII). C++/Qt/Python côté embarqué, outillage et UI. Motivé, rigoureux, efficace en équipe.</p>
       </div>
       <div class="chips">
         <div class="chip">C++17/20</div><div class="chip">Qt Widgets/QML</div><div class="chip">Python 3</div>
@@ -114,48 +120,40 @@
         <h3>Outil de supervision capteurs (C++/Qt)</h3>
         <div class="muted">Interface Qt pour monitorer des capteurs via UART/I2C · Graphiques temps réel · Export CSV</div>
         <ul class="clean">
-          <li>Architecture en MVC + threads pour l’acquisition temps réel</li>
-          <li>Parsing binaire / protocole maison, tests unitaires (Catch2)</li>
-          <li>Packaging multiplateforme (Windows/Linux) avec CMake</li>
+          <li>Architecture MVC + threads pour acquisition en continu</li>
+          <li>Parsing binaire, protocole custom, tests (Catch2)</li>
+          <li>Packaging Windows/Linux avec CMake</li>
         </ul>
-        <div class="chips">
-          <div class="chip">C++</div><div class="chip">Qt</div><div class="chip">CMake</div><div class="chip">Serial</div>
-        </div>
+        <div class="chips"><div class="chip">C++</div><div class="chip">Qt</div><div class="chip">CMake</div><div class="chip">Serial</div></div>
       </div>
       <div class="item">
         <h3>Scraper & structuration de données (Python)</h3>
         <div class="muted">Extraction Playwright + parsing, génération CSV/Excel, logs & robustesse</div>
         <ul class="clean">
-          <li>Gestion des timeouts, sélecteurs, et anti‑bot basique</li>
+          <li>Gestion des timeouts, sélecteurs & anti-bot basique</li>
           <li>Nettoyage/normalisation via pandas, export XLSX</li>
           <li>CLI documentée, configuration YAML</li>
         </ul>
-        <div class="chips">
-          <div class="chip">Python</div><div class="chip">Playwright</div><div class="chip">pandas</div>
-        </div>
+        <div class="chips"><div class="chip">Python</div><div class="chip">Playwright</div><div class="chip">pandas</div></div>
       </div>
       <div class="item">
         <h3>CV en HTML (ce site)</h3>
-        <div class="muted">Version interactive de mon CV, pensée pour partage LinkedIn et impression PDF.</div>
+        <div class="muted">Version interactive du CV, pensée pour partage LinkedIn et impression PDF.</div>
         <ul class="clean">
-          <li>Responsive design, thèmes sombre/print</li>
-          <li>Balises OpenGraph + JSON‑LD (SEO/preview)</li>
-          <li>Bouton d’export PDF (window.print())</li>
+          <li>Responsive design, thème sombre/print</li>
+          <li>Balises OpenGraph + JSON-LD (SEO/preview)</li>
+          <li>Bouton d’export PDF</li>
         </ul>
-        <div class="chips">
-          <div class="chip">HTML</div><div class="chip">CSS</div><div class="chip">JS</div>
-        </div>
+        <div class="chips"><div class="chip">HTML</div><div class="chip">CSS</div><div class="chip">JS</div></div>
       </div>
       <div class="item">
-        <h3>Automatisation simple CI/CD</h3>
-        <div class="muted">Mise en place d’une pipeline basique (lint, build, tests).</div>
+        <h3>Automatisation CI/CD</h3>
+        <div class="muted">Pipeline simple (lint, build, tests) et artefacts.</div>
         <ul class="clean">
           <li>CMake + GitHub Actions</li>
-          <li>Artefacts de build, cache, badges</li>
+          <li>Badges & cache de build</li>
         </ul>
-        <div class="chips">
-          <div class="chip">GitHub Actions</div><div class="chip">CMake</div><div class="chip">CTest</div>
-        </div>
+        <div class="chips"><div class="chip">GitHub Actions</div><div class="chip">CMake</div><div class="chip">CTest</div></div>
       </div>
     </div>
   </section>
@@ -176,8 +174,8 @@
         <h3>Connaissances</h3>
         <ul class="clean">
           <li>Systèmes embarqués, microcontrôleurs</li>
-          <li>Électronique numérique (I2C, SPI, UART), protocoles série</li>
-          <li>Conception UI (Qt Widgets/QML)</li>
+          <li>Électronique numérique (I2C, SPI, UART)</li>
+          <li>UI Qt (Widgets/QML)</li>
           <li>Structures de données, POO, tests</li>
         </ul>
       </div>
@@ -191,7 +189,7 @@
       </div>
       <div class="item" id="contact">
         <h3>Disponibilités</h3>
-        <p class="muted">Démarrage immédiat en alternance. Ouvert aux échanges rapides (visio/présentiel).</p>
+        <p class="muted">Démarrage possible immédiatement. Ouvert aux échanges rapides (visio/présentiel).</p>
       </div>
     </div>
   </section>
@@ -200,7 +198,7 @@
     <h2>Formation</h2>
     <div class="item">
       <h3>Polytech Tours – Informatique & Systèmes Intelligents Embarqués (ISIE)</h3>
-      <div class="muted">Cycle ingénieur – 2025 – Tours</div>
+      <div class="muted">Cycle ingénieur — 2025 — Tours</div>
       <ul class="clean">
         <li>Programmation C++/Python, systèmes embarqués, Linux</li>
         <li>Projets pratiques : outils Qt, automatisation Python</li>
@@ -213,23 +211,79 @@
     <div class="grid-2">
       <div class="item">
         <h3>Langues</h3>
-        <div class="chips">
-          <div class="chip">Français (C2)</div>
-          <div class="chip">Anglais (B2)</div>
-        </div>
+        <div class="chips"><div class="chip">Français (C2)</div><div class="chip">Anglais (B2)</div></div>
       </div>
       <div class="item">
         <h3>Intérêts</h3>
-        <div class="chips">
-          <div class="chip">IA & automatisation</div><div class="chip">Embarqué</div><div class="chip">Open‑source</div>
-        </div>
+        <div class="chips"><div class="chip">IA & automatisation</div><div class="chip">Embarqué</div><div class="chip">Open-source</div></div>
       </div>
     </div>
   </section>
 
   <footer>
-    © 2025 — Mohamed AOUADI. CV HTML interactif.
+    © 2025 — Aziz AOUADI. CV HTML interactif.
   </footer>
 </div>
+
+<!-- FICHE CONTACT (Modal + vCard) -->
+<div class="overlay" id="overlay"></div>
+<div class="modal" id="modal">
+  <div class="card">
+    <div class="close-x" id="closeModal" aria-label="Fermer">×</div>
+    <h3>Fiche contact — Aziz AOUADI</h3>
+    <div class="row">
+      <span class="pill">📧 <a href="mailto:aouadiaziz50@gmail.com">aouadiaziz50@gmail.com</a></span>
+      <span class="pill">📱 <a href="tel:+33625403160">+33 6 25 40 31 60</a></span>
+      <span class="pill">📍 Tours (FR)</span>
+      <span class="pill">🎓 Polytech Tours — ISIE</span>
+    </div>
+    <div class="modal-actions">
+      <a id="downloadVcf" class="btn" download="Aziz_AOUADI.vcf">Télécharger la fiche (.vcf)</a>
+      <a class="btn secondary" href="mailto:aouadiaziz50@gmail.com?subject=Entretien%20alternance&body=Bonjour%20Aziz,%0A%0ANous%20souhaiterions%20échanger...">Envoyer un email</a>
+      <a class="btn secondary" href="tel:+33625403160">Appeler</a>
+    </div>
+    <p class="muted" style="margin-top:10px;">Astuce : ajoute la fiche .vcf à ton répertoire pour garder mes coordonnées. <span class="kbd">Entrée</span> pour fermer.</p>
+  </div>
+</div>
+
+<script>
+  // ——— Modal ouvert/fermé
+  const openBtn = document.getElementById('openContact');
+  const overlay = document.getElementById('overlay');
+  const modal   = document.getElementById('modal');
+  const closeX  = document.getElementById('closeModal');
+
+  function openModal() {
+    overlay.style.display = 'block';
+    modal.style.display = 'grid';
+  }
+  function closeModal() {
+    overlay.style.display = 'none';
+    modal.style.display = 'none';
+  }
+  openBtn.addEventListener('click', openModal);
+  overlay.addEventListener('click', closeModal);
+  closeX.addEventListener('click', closeModal);
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' || e.key === 'Enter') closeModal(); });
+
+  // ——— Génération du fichier vCard au vol
+  const vcard = [
+    'BEGIN:VCARD',
+    'VERSION:3.0',
+    'N:AOUADI;Aziz;;;',
+    'FN:Aziz AOUADI',
+    'EMAIL;TYPE=INTERNET,PREF:aouadiaziz50@gmail.com',
+    'TEL;TYPE=CELL:+33625403160',
+    'ADR;TYPE=HOME:;;Tours;;;France',
+    'TITLE:Apprenti Développeur (C++ / Qt / Python)',
+    'ORG:Polytech Tours – ISIE',
+    'URL:https://aouadiaziz50-star.github.io/cv-mohamed-aouadi/',
+    'END:VCARD'
+  ].join('\\n');
+
+  const blob = new Blob([vcard], { type: 'text/vcard' });
+  const vcfUrl = URL.createObjectURL(blob);
+  document.getElementById('downloadVcf').setAttribute('href', vcfUrl);
+</script>
 </body>
 </html>
